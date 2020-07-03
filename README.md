@@ -17,7 +17,7 @@ Once we've downloaded the data from the zip file and unzip it(UCI HAR Dataset), 
 
 
 ## How the Script Works
-The script is written to comply with the instructions given (which will be inserted throughout both in the script and this document). There are 5 main stages in this procedure.
+The script is written to comply with the instructions given (which will be inserted throughout both in the script and this document). There are 7 main stages in this procedure.
 1. Load the *reshape2* package and the data from all files into R. 
 
 2. Merge the corresponding *train* and *test* data files together.   
