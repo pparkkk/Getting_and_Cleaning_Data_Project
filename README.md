@@ -6,32 +6,36 @@ The dataset for which the analysis is carried on is the data collected from the 
 
 ## The Raw Data
 Once we've downloaded the data from the zip file and unzip it(UCI HAR Dataset), there are a bunch of sub-folders and files within the UCI HAR Dataset folder. In this study, we're only interested in the following:
-    In the main folder:
-        1. features.txt             -> the names of all the measurements that were taken. 
-        1. activity_labels.txt      -> numbered from 1 to 6, each is an ID representing a particular tasks performed. 
-    In the *test* sub-folder:
-        1. X_test.txt               -> the measurements according to the 'features.txt' file from the *test* group. 
-        1. y_test.txt               -> the activities' ID according to the *activity_labels.txt* file from the *test* group. 
-        1. subject_test.txt         -> the experiment takers' ID (ranged from 1 to 30) from the *test* group. 
-    In the *train* sub-folder:
-        1. X_train.txt              -> the measurements according to the 'features.txt' file from the *train* group. 
-        1. y_train.txt              -> the activities' ID according to the *activity_labels.txt* file from the *train* group. 
-        1. subject_train.txt        -> the experiment takers' ID (ranged from 1 to 30) from the *train* group. 
+1. features.txt             -> the names of all the measurements that were taken. 
+2. activity_labels.txt      -> numbered from 1 to 6, each is an ID representing a particular tasks performed. 
+3. X_test.txt               -> the measurements according to the 'features.txt' file from the *test* group. 
+4. y_test.txt               -> the activities' ID according to the *activity_labels.txt* file from the *test* group. 
+5. subject_test.txt         -> the experiment takers' ID (ranged from 1 to 30) from the *test* group. 
+6. X_train.txt              -> the measurements according to the 'features.txt' file from the *train* group. 
+7. y_train.txt              -> the activities' ID according to the *activity_labels.txt* file from the *train* group. 
+8. subject_train.txt        -> the experiment takers' ID (ranged from 1 to 30) from the *train* group. 
 
 
 ## How the Script Works
 The script is written to comply with the instructions given (which will be inserted throughout both in the script and this document). There are 5 main stages in this procedure.
-    1. Load the *reshape2* package and the data from all files into R. 
-    1. Merge the corresponding *train* and *test* data files together. **(STEP1: Merges the training and the test sets to create one data set.)**  
-        ie. the 'x_test' and the 'x_train' dataset are merged to create the 'x_total' and vice versa for the *y* and *subject* datasets
-    1. Rename the column names for the 'x_total' data with those names in the 'feature' dataset (abbreviated as 'feat' in the script). 
-       **(STEP4: Appropriately labels the data set with descriptive variable names.)**
-    1. Append the merged *y* and *subject* data to the last 2 columns of the 'x_total' as *activity* and *subject*, respectively. 
-    1. Subset out the columns in 'x_total' that contains either *mean()* or *std()* (abbreviated for standard deviation), as well as the *activity* and *subject*. 
-       **(STEP2: Extracts only the measurements on the mean and standard deviation for each measurement.)**
-    1. Create another column for the 'x_total' called *activityLabels* which refers to the 'activity_labels.txt' file and replace the activity IDs with the                 corresponding names. 
-       **(STEP3: Uses descriptive activity names to name the activities in the data set.)**
-    1. Calculate the mean of each measurement grouped by both the *activityLabels* and *subject*. Write this out into a new dataset in the '.txt' format. 
-       **(STEP5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.)**
+1. Load the *reshape2* package and the data from all files into R. 
+
+2. Merge the corresponding *train* and *test* data files together.   
+   ie. the 'x_test' and the 'x_train' dataset are merged to create the 'x_total' and vice versa for the *y* and *subject* datasets
+   **(STEP1: Merges the training and the test sets to create one data set.)**
+   
+3. Rename the column names for the 'x_total' data with those names in the 'feature' dataset (abbreviated as 'feat' in the script). 
+   **(STEP4: Appropriately labels the data set with descriptive variable names.)**
+   
+4. Append the merged *y* and *subject* data to the last 2 columns of the 'x_total' as *activity* and *subject*, respectively. 
+
+5. Subset out the columns in 'x_total' that contains either *mean()* or *std()* (abbreviated for standard deviation), as well as the *activity* and *subject*. 
+   **(STEP2: Extracts only the measurements on the mean and standard deviation for each measurement.)**
+   
+6. Create another column for the 'x_total' called *activityLabels* which refers to the 'activity_labels.txt' file and replace the activity IDs with the              corresponding names. 
+   **(STEP3: Uses descriptive activity names to name the activities in the data set.)**
+   
+7. Calculate the mean of each measurement grouped by both the *activityLabels* and *subject*. Write this out into a new dataset in the '.txt' format. 
+   **(STEP5: From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.)**
        
          
