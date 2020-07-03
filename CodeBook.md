@@ -1,5 +1,5 @@
 # Getting_and_Cleaning_Data_Project_CodeBook
-This is a codebook for the project. The document will describe all the variables which are being used in the analysis and any manipulation of thr initial data.
+This is a codebook for the project. The document will describe all the variables which are being used in the analysis and any manipulation of the initial data.
 
 
 ## The Raw Data
