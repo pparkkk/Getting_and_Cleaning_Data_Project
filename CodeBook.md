@@ -4,26 +4,26 @@ This is a codebook for the project. The document will describe all the variables
 
 ## The Raw Data
 There are 3 main categories of variables, as the following:
-    1. The participant ID    -> ranged from 1 to 30
-    2. The activity ID       -> ranged from 1 to 6, which are corresponding to *WALKING*, *WALKING_UPSTAIRS*, *WALKING_DOWNSTAIRS*, *SITTING*, *STANDING* and *LAYING*
-    3. The measurements/features  -> each of the following measurements has a summary statistics attached to it, but we are only interested in the mean(*mean()*) and standard deviation(*std()*)    
-        + tBodyAcc-XYZ  
-        + tGravityAcc-XYZ  
-        + tBodyAccJerk-XYZ  
-        + tBodyGyro-XYZ  
-        + tBodyGyroJerk-XYZ  
-        + tBodyAccMag  
-        + tGravityAccMag  
-        + tBodyAccJerkMag  
-        + tBodyGyroMag  
-        + tBodyGyroJerkMag  
-        + fBodyAcc-XYZ  
-        + fBodyAccJerk-XYZ  
-        + fBodyGyro-XYZ  
-        + fBodyAccMag  
-        + fBodyAccJerkMag  
-        + fBodyAccJerkMag  
-        + fBodyGyroJerkMag 
+1. The participant ID    -> ranged from 1 to 30
+2. The activity ID       -> ranged from 1 to 6, which are corresponding to *WALKING*, *WALKING_UPSTAIRS*, *WALKING_DOWNSTAIRS*, *SITTING*, *STANDING* and *LAYING*
+3. The measurements/features  -> each of the following measurements has a summary statistics attached to it, but we are only interested in the mean(*mean()*) and standard deviation(*std()*)    
+    + tBodyAcc-XYZ  
+    + tGravityAcc-XYZ  
+    + tBodyAccJerk-XYZ  
+    + tBodyGyro-XYZ  
+    + tBodyGyroJerk-XYZ  
+    + tBodyAccMag  
+    + tGravityAccMag  
+    + tBodyAccJerkMag  
+    + tBodyGyroMag  
+    + tBodyGyroJerkMag  
+    + fBodyAcc-XYZ  
+    + fBodyAccJerk-XYZ  
+    + fBodyGyro-XYZ  
+    + fBodyAccMag  
+    + fBodyAccJerkMag  
+    + fBodyAccJerkMag  
+    + fBodyGyroJerkMag 
      
 **(Note: the list of measurements above and the following explanation about them is copied from the *'features._info.txt'* file in the *UCI HAR Dataset*)**
 
@@ -39,8 +39,8 @@ These signals were used to estimate variables of the feature vector for each pat
 
 ## Transformations
 The following manipulations were carried out during the process of tidying up the dataset:
-    1. The interested datasets are merged together
-    2. The columns of the 'x_total' data is being renamed using 'feat'
-    3. A new column is added called the *activityLabels*. This is a factor variable consisting of 6 levels, corresponding to the tasks specified above.
-    4. A new 'tidy' data set was created, consisting of the mean values of each measurements interested, grouped by *activityLabels* and *subject*
+1. The interested datasets are merged together
+2. The columns of the 'x_total' data is being renamed using 'feat'
+3. A new column is added called the *activityLabels*. This is a factor variable consisting of 6 levels, corresponding to the tasks specified above.
+4. A new 'tidy' data set was created, consisting of the mean values of each measurements interested, grouped by *activityLabels* and *subject*
 
